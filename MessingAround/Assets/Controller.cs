@@ -17,11 +17,11 @@ public class Controller : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
         float xSpeed = Input.GetAxis("Horizontal");
-        float ySpeed = Input.GetAxis("Vertical");
+        float zSpeed = Input.GetAxis("Vertical");
         float jump = Input.GetAxis("Jump");
 
-        Vector3 movement = new Vector3(xSpeed, 0.0f, ySpeed);
-        Vector3 jumpAction = new Vector3(0, jump, ySpeed);
+        Vector3 movement = new Vector3(xSpeed, 0.0f, zSpeed);
+        Vector3 jumpAction = new Vector3(0, jump, 0);
 
         GetComponent<Rigidbody>().AddForce(movement);
 
