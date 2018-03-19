@@ -5,7 +5,7 @@ using UnityEngine;
 public class playerController : MonoBehaviour {
 
     public float multiplier;
-    public Rigidbody rb;
+    private Rigidbody rb;
 
     // Use this for initialization
     void Start () {     

@@ -630,12 +630,13 @@ PlayerSettings:
       daydreamIconForeground: {fileID: 0}
       daydreamIconBackground: {fileID: 0}
   cloudServicesEnabled:
+    Collab: 0
     UNet: 1
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
-  cloudProjectId: 9bbdf7a3-0611-4f77-a44e-8dac55b9d603
-  projectName: physicsBasedPuzzlePlatformer (1)
-  organizationId: swapniliqbal
+  cloudProjectId: fcacb600-bcd2-403c-881f-8852d0ee9616
+  projectName: physicsBasedPuzzlePlatformer
+  organizationId: coul4
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
