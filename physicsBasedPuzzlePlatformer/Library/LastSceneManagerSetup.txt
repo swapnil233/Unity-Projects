@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/something.unity
-  isLoaded: 1
-  isActive: 1
+- path: Assets/LevelOnePrototype.unity
+  isLoaded: 0
+  isActive: 0
