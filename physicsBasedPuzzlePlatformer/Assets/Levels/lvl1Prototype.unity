@@ -126,6 +126,7 @@ GameObject:
   - component: {fileID: 500185494}
   - component: {fileID: 500185493}
   - component: {fileID: 500185498}
+  - component: {fileID: 500185499}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -225,8 +226,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a15fc84ba5a8194fbe53dd9dda4ce2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  multiplier: 10
+  speedNum: 0
   rb: {fileID: 0}
+  multiplier: 10
+  ball: {fileID: 500185492}
+--- !u!143 &500185499
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 500185492}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 1
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1043822880
 GameObject:
   m_ObjectHideFlags: 0
