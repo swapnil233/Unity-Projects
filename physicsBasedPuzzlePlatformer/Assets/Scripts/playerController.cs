@@ -2,17 +2,19 @@
 
 public class playerController : MonoBehaviour
 {
-
     public float speedNum;
 
     //Character Controller
     private CharacterController controller;
     private float verticalVelocity;
     private float gravity = 10.0f;
-    private float jumpForce = 5.0f;
+    private float jumpForce = 7.0f;
 
     //Rigid Body 
     public Rigidbody rb;
+
+    public LayerMask groundLayers;
+    public SphereCollider col;
 
     public float multiplier;
 
@@ -21,7 +23,6 @@ public class playerController : MonoBehaviour
 
     //Check for respawn
     private bool belowground;
-    
 
     // Use this for initialization
     void Start()
@@ -30,13 +31,17 @@ public class playerController : MonoBehaviour
 
         //Initializing rigid body and char controller @ the start
         rb = GetComponent<Rigidbody>();
-        controller = GetComponent<CharacterController>();
+        col = GetComponent<SphereCollider>();
+
+
+
+        //controller = GetComponent<CharacterController>();
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        /*
         //Respawn function
         if (ball.transform.position.y < 0)
         {
@@ -48,18 +53,33 @@ public class playerController : MonoBehaviour
             ball.transform.position = new Vector3(-2, 5, -8);
             belowground = false;
         }
+        */
 
-        /*
-        //VARIABLES
         float xSpeed = Input.GetAxis("Horizontal");
         float ySpeed = Input.GetAxis("Vertical");
-        float jump = Input.GetAxis("Jump");
+
         //Ball Movement
         Vector3 movement = new Vector3(xSpeed, 0, ySpeed);
         rb.AddForce(movement * speedNum);
-        */
+
+        if (isGrounded() && Input.GetKeyDown(KeyCode.Space))
+        {
+            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);//impulse adds this amount of force once instead of over a period of time
+
+        }
+
+
+
+
+
+
+
+
+
 
         //Alternate moving script
+
+        /*
         if (controller.isGrounded)
         {
             verticalVelocity = -gravity * Time.deltaTime;
@@ -81,6 +101,13 @@ public class playerController : MonoBehaviour
         moveVector.y = verticalVelocity;
         moveVector.z = Input.GetAxis("Vertical") * 5.0f;
         controller.Move(moveVector * Time.deltaTime);
+        */
 
+    }
+
+    private bool isGrounded()
+    {
+        return Physics.CheckCapsule(col.bounds.center, new Vector3 (col.bounds.center.x, col.bounds.min.y, col.bounds.center.z), 
+            col.radius * 9, groundLayers);
     }
 }
