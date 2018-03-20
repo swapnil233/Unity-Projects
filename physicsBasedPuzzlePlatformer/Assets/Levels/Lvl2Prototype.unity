@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.45035595, g: 0.4981041, b: 0.56307423, a: 1}
+  m_IndirectSpecularColor: {r: 0.45035517, g: 0.49810344, b: 0.5630734, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -511,13 +511,17 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1369671874}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0a15fc84ba5a8194fbe53dd9dda4ce2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speedNum: 10
   rb: {fileID: 0}
+  groundLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  col: {fileID: 0}
   multiplier: 10
   ball: {fileID: 1369671874}
 --- !u!95 &1369671877

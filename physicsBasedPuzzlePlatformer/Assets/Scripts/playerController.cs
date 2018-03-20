@@ -8,7 +8,7 @@ public class playerController : MonoBehaviour
     private CharacterController controller;
     private float verticalVelocity;
     private float gravity = 10.0f;
-    private float jumpForce = 7.0f;
+    private float jumpForce = 5.0f;
 
     //Rigid Body 
     public Rigidbody rb;
@@ -67,14 +67,6 @@ public class playerController : MonoBehaviour
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);//impulse adds this amount of force once instead of over a period of time
 
         }
-
-
-
-
-
-
-
-
 
 
         //Alternate moving script
