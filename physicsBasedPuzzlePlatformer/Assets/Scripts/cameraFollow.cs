@@ -17,20 +17,6 @@ public class cameraFollow : MonoBehaviour {
         Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
 
         transform.position = smoothedPosition;
-            
-        if (ball.transform.position.z > 0 && camchange == true)
-        {
-
-            Vector3 desiredPosition2 = target.position + offset2;
-            Vector3 smoothedPosition2 = Vector3.Lerp(transform.position, desiredPosition2, smoothSpeed);
-            Quaternion smoothedRotation2 = Quaternion.Euler(30, 117, 1);
-            transform.position = smoothedPosition2;
-            transform.rotation = smoothedRotation2;
-        }
         
     }
-
-
-
-
 }

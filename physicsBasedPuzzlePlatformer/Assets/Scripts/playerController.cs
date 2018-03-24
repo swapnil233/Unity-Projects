@@ -7,7 +7,7 @@ public class playerController : MonoBehaviour
     //Character Controller
     private CharacterController controller;
     private float verticalVelocity;
-    private float gravity = 10.0f;
+    private float gravity = 250.0f;
     private float jumpForce = 5.0f;
 
     //Rigid Body 
