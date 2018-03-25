@@ -13,7 +13,7 @@ public class RespawnScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (transform.position.y < 0)
+        if (transform.position.y < 0)
         {
             transform.position = initialposition;
             rb.isKinematic = true; // disables physics temporarily(removes momentum)
